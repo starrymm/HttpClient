@@ -1,0 +1,5 @@
+/root/HttpClient/build/CMakeFiles/edit_cache.dir
+/root/HttpClient/build/CMakeFiles/rebuild_cache.dir
+/root/HttpClient/build/src/CMakeFiles/edit_cache.dir
+/root/HttpClient/build/src/CMakeFiles/rebuild_cache.dir
+/root/HttpClient/build/src/CMakeFiles/MyHttp.dir

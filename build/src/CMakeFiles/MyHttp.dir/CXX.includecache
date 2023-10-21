@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/HttpClient.h
+
+/root/HttpClient/src/HttpClient.cpp
+stdio.h
+-
+HttpClient.h
+/root/HttpClient/src/HttpClient.h
+HttpClientImp.h
+/root/HttpClient/src/HttpClientImp.h
+
+/root/HttpClient/src/HttpClientImp.cpp
+HttpClientImp.h
+/root/HttpClient/src/HttpClientImp.h
+malloc.h
+-
+
+/root/HttpClient/src/HttpClientImp.h
+pthread.h
+-
+memory.h
+-
+HttpClient.h
+/root/HttpClient/src/HttpClient.h
+HttpTask.h
+/root/HttpClient/src/HttpTask.h
+
+/root/HttpClient/src/HttpTask.h
+string
+-
+

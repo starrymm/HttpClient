@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -g  -shared -Wl,-soname,libMyHttp.so -o libMyHttp.so CMakeFiles/MyHttp.dir/HttpClient.cpp.o CMakeFiles/MyHttp.dir/HttpClientImp.cpp.o 
