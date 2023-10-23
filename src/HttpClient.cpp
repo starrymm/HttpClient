@@ -4,16 +4,16 @@
 #include "HttpClientImp.h"
 
 
-HttpClient::HttpClient(int connect_timeout, HttpClientListener *listener) {
-    m_imp = new HttpClientImp(connect_timeout, listener);
+HttpClient::HttpClient(int connect_timeout) {
+    m_imp = new HttpClientImp(connect_timeout);
 }
 
 HttpClient::~HttpClient() {
     if (m_imp) {
-        delete m_imp;
-        m_imp = NULL;
+        HttpClientImp *imp = (HttpClientImp *) m_imp; 
+        delete imp;
+        imp = NULL;
     }
-
 }
 
 int HttpClient::appendHeader(const char *key, const char *value) {
@@ -40,4 +40,10 @@ int HttpClient::addPostRequest(const char *url, const char *param, void *arg) {
 int HttpClient::addBlockPostRequest(const char*url, const char *param, void *arg){
     HttpClientImp *imp = (HttpClientImp *) m_imp;
     return imp->addBlockPostRequest(url, param, arg);
+}
+
+void HttpClient::setListener(HttpClientListener *listener) {
+    HttpClientImp *imp = (HttpClientImp *) m_imp;
+    imp->setListener(listener); 
+    return ;
 }

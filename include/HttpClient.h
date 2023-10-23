@@ -10,11 +10,12 @@ public:
 
 class HttpClient {
 public:
-    HttpClient(int connect_timeout, HttpClientListener *listener);
+    HttpClient(int connect_timeout);
     ~HttpClient();
 
 public:
     // todo 代码注释风格
+    void setListener(HttpClientListener *listener);
     int appendHeader(const char *key, const char *value); 
     int addGetRequest(const char *url, void *arg);
     int addPostRequest(const char *url, const char* param, void *arg);
